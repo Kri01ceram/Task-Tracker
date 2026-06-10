@@ -41,4 +41,9 @@ const isssues = [{
 }]
 
 const app = express()
+
+app.post("/organization")
+
+
+
 app.listen(3005);
