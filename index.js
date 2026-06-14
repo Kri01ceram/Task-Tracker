@@ -1,4 +1,5 @@
 const express = require("express");
+const jwt = require("jsonwebtoken")
 
 let USER_ID = 1
 let ORGANIZATION_ID = 1
@@ -61,7 +62,10 @@ app.post("/signin" ,(req,res) => {
             message: "incorrect credentials"
         })
     }
-    
+    const token = jwt.sign({
+        userId: userExists.id
+    },"pagalhkya")
+
 })
 
 
