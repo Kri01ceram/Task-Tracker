@@ -65,6 +65,9 @@ app.post("/signin" ,(req,res) => {
     const token = jwt.sign({
         userId: userExists.id
     },"pagalhkya")
+    req.json({
+        token
+    })
 
 })
 
